@@ -1,0 +1,163 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title SBC - надежный партнер в сфере платежей и обработки карточных данных
+    link(rel='stylesheet', href='css/main.css')
+    link(rel="icon" href="img/fav.ico" type="image/vnd.microsoft.icon")
+
+  body
+    div.overlay-b
+      header
+        .header-container
+          a(href="#").logo-link
+
+          nav
+            ul.main-nav
+              li
+                a(href="#") Решения
+              li
+                a(href="#") Отрасли
+              li
+                a(href="#") Поддержка
+              li
+                a(href="#") О компании
+              li
+                a(href="#") Контакты
+          a(href="callto:+74956486744").call-link +7 (495) 648 67 44
+          button.search-button
+          button.lang-switch-button En
+
+
+      main
+        section.video-container
+          div(id="trailer" class="is_overlay")
+            <video id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto" muted="muted">
+              <source src="img/video.mp4"></source>
+            </video>
+              div.first-video-text
+                h2 Secure. Beneficial.
+                p Customized Technologies.
+              div.main-video-text
+                h2 Используйте лучшее, <br>
+                  span что может предложить <br>платежная индустрия
+                p SBC - надежный партнёр в сфере платежей <br> и обработки карточных данных.
+
+                button(class="start-button js-button-campaign", id="myBtn") Начать работу
+                div(class="modal" id="myModal")
+                  .modal-lay
+                  .modal-content
+                    span.close
+                    div(class="popup")
+                      h2(class="popup__title") Подключить услугу
+
+                      form(class="popup__form" id="form-1")
+
+                        label(for="username" class="input-label" id="username-name-label") Имя
+                        input(type="text" class="popup-form__input" name="username" id="username" autocomplete="off")
+                        label(for="username" class="line-label" id="username-line-label")
+
+
+                        label(for="e-mail" class="input-label" id="e-mail-name-label") E-mail
+                        input(type="email" class="popup-form__input" name="e-mail" id="e-mail" autocomplete="off")
+                        label(for="e-mail" class="line-label" id="e-mail-line-label")
+
+
+                        label(for="phone" class="input-label" id="phone-name-label") Телефон
+                        input(type="text" class="popup-form__input" name="tel-number" id="phone" autocomplete="off")
+                        label(for="phone" class="line-label" id="phone-line-label")
+
+
+                        label(for="about-project" class="input-label" id="about-project-name-label") Расскажите о своем проекте
+                        textarea(type="text" class="popup-form__input" data-autoresize rows="2" name="about-project" id="about-project" value="" required="required")
+                        label(for="about-project" class="line-label" id="about-project-line-label")
+
+
+                        button(class="popup-form__button" type="submit") Подключить
+
+                        <div class="popup-check">Нажимая кнопку «Подключить», вы соглашаетесь с
+                            <a href="agree.html" target="_blank"> Условиями.</a>
+                        </div>
+
+
+
+
+        section.filter
+          .section-center-container
+            h2 Решения по отраслям
+            div.buttons-container
+              div(class='filter-button ' id='js-filter-button__all')
+                button Все
+                div.side-a.js-tap
+                div.side-b.js-tap
+                div.side-c.js-tap
+                div.side-d.js-tap
+
+              div(class='filter-button' id='js-filter-button__banks')
+                button Банки
+                div.side-a
+                div.side-b
+                div.side-c
+                div.side-d
+
+              div(class='filter-button' id='js-filter-button__credit')
+                button Кредитные организации
+                div.side-a
+                div.side-b
+                div.side-c
+                div.side-d
+
+              div(class='filter-button' id='js-filter-button__internet')
+                button Интернет-ритейл
+                div.side-a
+                div.side-b
+                div.side-c
+                div.side-d
+
+              div(class='filter-button' id='js-filter-button__fintech')
+                button Финтех-компании
+                div.side-a
+                div.side-b
+                div.side-c
+                div.side-d
+
+
+            div.solutions-container
+              a.solutions-item#item1
+                h3 Интернет-<br>эквайринг
+                p Принимайте платежи по банковским картам и с помощью алтернативных...
+              a.solutions-item#item2
+                h3 Решение <br>для онлайн-<br>кредитования
+                p Выдавайте кредиты на сайте или в мобильном приложении под...
+              a.solutions-item#item3
+                h3 Финтегрейт
+                p Контролируйте и управляйте всеми платежными системами и банками из одного окна...
+              a.solutions-item#item4
+                h3 SEPA Direct Debit
+                p Начните принимать разовые или регулярные платежи с европейских счетов клиентов через...
+              a.solutions-item#item5
+                h3 Smart.POS
+                p Принимайте платежи по банковским картам с помощью mPOS и POS терминалов в оффлайновых точках...
+              a.solutions-item#item6
+                h3 Smart.Wallets
+                p Запустите свою систему расчётов с использованием электронных кошельков...
+              a.solutions-item#item7
+                h3 DengiSend
+                p Запустите сервис денежных переводов под собственным брендом. Решение работает через...
+              a.solutions-item#item8
+                h3 Flymoney
+                p Организуйте сервис моментальных безопасных денежных переводов наличными на карты любых...
+              a.solutions-item#item9
+                h3 Apple Pay<br> & Google Pay
+                p Принимайте платежи по банковским картам и с помощью алтернативных...
+              a.solutions-item#item10
+                h3 Мобильная<br> коммерция
+                p Принимайте платежи по банковским картам и с помощью алтернативных...
+
+
+
+      footer
+
+
+    script(src='js/jQuery3.3.1.js')
+    script(src='js/main.js')

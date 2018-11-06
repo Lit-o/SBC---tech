@@ -1,0 +1,137 @@
+.header-container {
+  width: 1180px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Gilroy,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color:#000;
+}
+
+/*стилизация лого*/
+.logo-link {
+  margin-top: 44px;
+  width: 88px;
+  height: 57px;
+  background-image: url(../img/logo.png);
+  transition: all 0.5s ease;
+  &:hover{
+    background-image: url(../img/hover-logo.png);
+  }
+}
+
+/*стилизация навигации*/
+.main-nav {
+  margin-left: 57px;
+  margin-right: 195px;
+  margin-bottom: 100px;
+  font-size: 0;
+  li {
+    height: 16px;
+    padding: 0 20px;
+    margin-top: 60px;
+    display: inline-block;
+    a{
+      font-family: Gilroy,sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      color:#000;
+      padding: 40px 0;
+      &::after{
+        content:'';
+        display: block;
+        margin-top: 5px;
+        width: 0%;
+        height: 1px;
+        background-color: inherit;
+        transition: all 0.7s ease;
+      }
+      &:hover::after{
+        width: 100%;
+        background-color: #19459d;
+      };
+    }
+  }
+}
+
+/*стилизация ссылки на звонок*/
+.call-link {
+  margin-right: 33px;
+  padding: 30px 0;
+  margin-top: 30px;
+  color: #000;
+  height: 16px;
+    &::after{
+      content:'';
+      display: block;
+      margin-top: 8px;
+      width: 0%;
+      height: 1px;
+      background-color: inherit;
+      transition: all 0.7s ease;
+    }
+    &:hover::after{
+      width: 100%;
+      background-color: #19459d;
+    };
+
+  &::before {
+    content:'';
+    vertical-align: bottom;
+    display:inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/call-img.png);
+    @include trns
+  };
+  &:hover::before {
+    background-image: url(../img/hover-call-img.png);
+  }
+}
+
+.search-button {
+  margin-right: auto;
+  margin-top: 51px;
+  width: 14px;
+  height: 15px;
+  padding: 8px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: url(../img/search-img.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  @include trns
+  cursor: pointer;
+  &:hover {
+   background-image: url(../img/hover-search-img.png);
+  };
+}
+
+.lang-switch-button {
+  margin-top: 50px;
+  padding: 8px;
+  padding-right: 10px;
+  width: 16px;
+  height: 16px;
+  font-size: 15px;
+  line-height: 16px;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  @include trns
+  &:hover {
+   background-color: #19459d;
+   color: #fff;
+  };
+}

@@ -1,0 +1,228 @@
+.section-center-container{
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.filter {
+  margin-top: 145px;
+  margin-bottom: 100px;
+  min-height: 830px;
+  padding-top: 85px;
+  /*padding-bottom: 185px;*/
+
+  background-color: #e8e9e9;
+
+  h2 {
+    font-family: Gilroy,sans-serif;
+    font-size: 44px;
+    line-height: 44px;
+    color: #000;
+  }
+  .filter-button{
+    margin-right: 40px;
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    margin-top: 45px;
+    background-color: #e8e9e9;
+    overflow: hidden;
+    outline: none;
+    &:last-child{
+     margin-right: 0px;
+    };
+
+    /*Стилизация ховеров на фильтры*/
+
+    .side-a {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 100%;
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      /*transform: translate3d(0,-200%,0);*/
+    }
+
+    .side-a.js-on {
+      transform: translate3d(0,100%,0);
+    }
+
+    .side-a.js-tap {
+      transform: translate3d(0,100%,0);
+    }
+
+    .side-b {
+      position: absolute;
+      display: block;
+
+      width: 100%;
+      height: 1px;
+      bottom: 0px;
+      background-color: #000;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      transform: translate3d(-100%,0px,0);
+    }
+
+    .side-b.js-on{
+      transform: translate3d(0%,0,0);
+    }
+
+    .side-b.js-tap{
+      transform: translate3d(0%,0,0);
+    }
+
+    .side-c {
+      position: absolute;
+      display: block;
+
+      width: 1px;
+      height: 100%;
+      right: 0;
+/*      bottom: 0px;*/
+      background-color: #000;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      transform: translate3d(0,0%,0);
+    }
+
+    .side-c.js-on{
+      transform: translate3d(0,-100%,0);
+    }
+
+    .side-c.js-tap{
+      transform: translate3d(0,-100%,0);
+    }
+
+    .side-d {
+      position: absolute;
+      display: block;
+
+      width: 100%;
+      height: 1px;
+      top: 0px;
+      background-color: #000;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      transform: translate3d(100%,0px,0);
+    }
+
+    .side-d.js-on{
+      transform: translate3d(0%,0,0);
+    }
+
+    .side-d.js-tap{
+      transform: translate3d(0%,0,0);
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      padding: 0 20px;
+
+      font-family: "kudrya", serif;
+      font-size: 26px;
+      line-height: 26px;
+
+      outline: none;
+      cursor:pointer;
+      }
+
+  }
+}
+
+
+
+
+.solutions-container {
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+
+.solutions-item {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  background-color: #fff;
+
+  color: #000;
+
+  cursor: pointer;
+
+  transition: background-color 0.6s ease;
+  &:hover {
+    background-color: #1b1b1b;
+    color: #fff;
+  };
+  &:nth-child(6n+6){
+   margin-right: 0px;
+  };
+
+  h3{
+    font-family: Gilroy,sans-serif;
+    font-size: 16px;
+
+  }
+  p {
+    margin-top: 15px;
+    font-family: Gilroy,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+  }
+/*Стрелочки при ховере*/
+  &::before {
+      content:'';
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      display: inline-block;
+      width: 21px;
+      height: 11px;
+      background-image: url(../img/arrow.png);
+      transition: left 0.25s linear;
+    }
+    &::after {
+      content:'';
+      opacity: 0;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      display: inline-block;
+      width: 10px;
+      height: 1px;
+      background-color: #fff;
+      will-change: right;
+
+    }
+    &:hover::after{
+      opacity: 1;
+    }
+
+    &:hover::before {
+      background-image: url(../img/arrow-white.png);
+      left: 25px;
+    };
+}
